@@ -1,5 +1,18 @@
 <ul>
   <li *ngFor="let article of news">
-    {{article.description}}
+    <article class="message is-primary mb-4">
+      <h2 class="subtitle is-5 message-header mb-0">{{article.title}}</h2>
+      <div class="message-body">
+        <span class="is-italic">Author: {{article.author}}</span>
+        <p>{{article.description}}</p>
+        <p>Source: <a href={{article.url}}>{{article.url}}</a></p>
+        <p>
+          Published:
+          <span class="is-italic">
+            {{article.publishedAt}}
+          </span>
+        </p>
+      </div>
+    </article>
   </li>
 </ul>

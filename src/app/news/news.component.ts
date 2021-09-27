@@ -35,5 +35,4 @@ export class NewsComponent implements OnInit {
     this.getNews();
     console.log();
   }
-
 }

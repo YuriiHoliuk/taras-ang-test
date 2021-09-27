@@ -8,7 +8,7 @@ import { NewsResponse } from './types';
 })
 export class NewsService {
   url = 'https://newsapi.org/v2/everything?' +
-    'q=tesla-top-10' +
+    'q=audi-top-10' +
     '&from=2021-09-27' +
     '&apiKey=348599c2622b4d7ca5819d9ff0a05098';
 

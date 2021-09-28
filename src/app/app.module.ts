@@ -7,8 +7,9 @@ import { NewsComponent } from './news/news.component';
 import { HomeComponent } from './home/home.component';
 import { AppRouterModule } from './app-router.module';
 import { NavigationComponent } from './navigation/navigation.component';
-import { LoginComponent } from './authentication/login/login.component';
+import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     NewsComponent,
     HomeComponent,
     NavigationComponent,
-    LoginComponent
+    LoginComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

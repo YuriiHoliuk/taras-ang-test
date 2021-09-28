@@ -1,6 +1,14 @@
 export class LoginFormData {
   constructor (
-    public username: string,
-    public password: string
+    private username: string,
+    private password: string
   ) {}
+
+  getUsername() {
+    return this.username;
+  }
+
+  getPassword() {
+    return this.password;
+  }
 }

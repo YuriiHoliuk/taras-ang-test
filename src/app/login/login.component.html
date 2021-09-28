@@ -1,0 +1,75 @@
+<div class="is-flex is-flex-direction-column is-align-items-center">
+  <form class="box" #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)">
+    <h2 class="subtitle is-4 has-text-centered mb-4">Log In</h2>
+    <label for="username" class="label">Username:</label>
+    <div class="control">
+      <input
+        class="input mb-2"
+        id="username"
+        type="text"
+        name="username"
+        placeholder="Username"
+        required
+        ngModel
+        #username="ngModel"
+        minlength="5"
+      >
+      <div *ngIf="username.dirty || username.touched"
+        class="alert">
+        <p class="help is-danger" *ngIf="username.errors?.required">
+          Name is required.
+        </p>
+        <p class="help is-danger" *ngIf="username.errors?.minlength">
+          Name must be at least 5 characters long.
+        </p>
+      </div>
+    </div>
+    <label for="password" class="label">Password:</label>
+    <div class="control">
+      <input
+        class="input mb-2"
+        id="password"
+        type="password"
+        name="password"
+        placeholder="Password"
+        required
+        ngModel
+        #password="ngModel"
+        minlength="5"
+      >
+      <div *ngIf="password.dirty || password.touched" class="alert mb-2">
+        <p class="help is-danger" *ngIf="password.errors?.required">
+          Password is required.
+        </p>
+        <p class="help is-danger" *ngIf="password.errors?.minlength">
+          Password must be at least 5 characters long.
+        </p>
+      </div>
+      <div *ngIf="isButtonClicked && username.valid && password.valid">
+        <p
+          *ngIf="!this.authenticationService.isUsernameCorrect"
+          class="help is-danger mb-2"
+        >
+          Can't find entered user.
+        </p>
+        <p
+          *ngIf="!this.authenticationService.isPasswordCorrect && this.authenticationService.isUsernameCorrect"
+          class="help is-danger mb-2"
+        >
+          The password you entered is incorrect.
+        </p>
+      </div>
+    </div>
+    <div class="field">
+      <div class="control">
+        <button
+          type="submit"
+          class="button is-link is-fullwidth"
+          [disabled]="username.invalid || password.invalid"
+        >
+          Log in
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

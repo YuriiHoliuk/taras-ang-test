@@ -1,6 +1,5 @@
 import { Injectable, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginComponent } from '../login/login.component';
 import { LoginFormData } from './login-form-data';
 
 @Injectable({
@@ -27,7 +26,7 @@ export class AuthenticationService implements OnInit {
     return this.registeredUsers
       .some(user =>
         this.usernameCheck(loginFormData.getUsername(), user)
-        && this.passwordCheck(loginFormData.getUsername(), user)
+        && this.passwordCheck(loginFormData.getPassword(), user)
       )
   }
 

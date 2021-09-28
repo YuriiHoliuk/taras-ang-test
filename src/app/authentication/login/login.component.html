@@ -1,0 +1,38 @@
+<div class="is-flex is-flex-direction-column is-align-items-center">
+  <form class="field" #signInForm="ngForm" (ngSubmit)="onSubmit(signInForm)">
+    <label for="username">Username:</label>
+    <div class="control">
+      <input
+        class="input"
+        id="username"
+        type="text"
+        name="username"
+        placeholder="username"
+        ngModel
+        required
+      >
+    </div>
+    <label for="password">Password:</label>
+    <div class="control">
+      <input
+        class="input"
+        id="password"
+        type="password"
+        name="password"
+        placeholder="Password"
+        ngModel
+        required
+      >
+    </div>
+    <div class="field">
+      <div class="control">
+        <button
+          type="submit"
+          class="button is-link"
+        >
+          Log in
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

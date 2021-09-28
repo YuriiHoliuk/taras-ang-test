@@ -7,7 +7,8 @@ import { NewsComponent } from './news/news.component';
 import { HomeComponent } from './home/home.component';
 import { AppRouterModule } from './app-router.module';
 import { NavigationComponent } from './navigation/navigation.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     AppRouterModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 {
   "name": "test-task-angular",
-  "homepage": "https://tarasholiuk.github.io/authorization-angular",
+  "homepage": ".",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

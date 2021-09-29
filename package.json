@@ -1,5 +1,6 @@
 {
   "name": "test-task-angular",
+  "homepage": "https://tarasholiuk.github.io/authorization-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
